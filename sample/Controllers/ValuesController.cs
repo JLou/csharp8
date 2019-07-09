@@ -105,56 +105,54 @@ namespace DemoCsharp8.Controllers
         }
     }
 
-}
-
-internal class NumberFactService : INumberFactService
-{
-    private readonly IHttpClientFactory _clientFactory;
-
-    public NumberFactService(IHttpClientFactory clientFactory)
+    internal class NumberFactService : INumberFactService
     {
-        _clientFactory = clientFactory;
-    }
+        private readonly IHttpClientFactory _clientFactory;
 
-    public async IAsyncEnumerable<string> GetFactsAsync(int amount)
-    {
-        var client = _clientFactory.CreateClient("proxy");
-        var unusedNumbersList = Enumerable.Range(1, 100).ToList();
-        unusedNumbersList.Shuffle();
-        var unusedNumbers = new Stack<int>(unusedNumbersList.Take(amount));
-
-        while (unusedNumbers.Count > 0)
+        public NumberFactService(IHttpClientFactory clientFactory)
         {
-            var item = unusedNumbers.Pop();
-            var response = await client.GetAsync($"http://numbersapi.com/{item}");
-            yield return await response.Content.ReadAsStringAsync();
+            _clientFactory = clientFactory;
+        }
+
+        public async IAsyncEnumerable<string> GetFactsAsync(int amount)
+        {
+            var client = _clientFactory.CreateClient("proxy");
+            var unusedNumbersList = Enumerable.Range(1, 100).ToList();
+            unusedNumbersList.Shuffle();
+            var unusedNumbers = new Stack<int>(unusedNumbersList.Take(amount));
+
+            while (unusedNumbers.Count > 0)
+            {
+                var item = unusedNumbers.Pop();
+                var response = await client.GetAsync($"http://numbersapi.com/{item}");
+                yield return await response.Content.ReadAsStringAsync();
+            }
         }
     }
-}
 
 
 
-public interface INumberFactService
-{
-    public IAsyncEnumerable<string> GetFactsAsync(int amount);
-}
-
-public static class IListExtensions
-{
-    private static Random rng = new Random();
-
-    public static void Shuffle<T>(this IList<T> list)
+    public interface INumberFactService
     {
-        int n = list.Count;
-        while (n > 1)
+        public IAsyncEnumerable<string> GetFactsAsync(int amount);
+    }
+
+    public static class IListExtensions
+    {
+        private static Random rng = new Random();
+
+        public static void Shuffle<T>(this IList<T> list)
         {
-            n--;
-            int k = rng.Next(n + 1);
-            T value = list[k];
-            list[k] = list[n];
-            list[n] = value;
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
         }
     }
-}
 
 }
