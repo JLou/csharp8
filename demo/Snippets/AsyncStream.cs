@@ -42,6 +42,7 @@ namespace Snippets
                 yield return await response.Content.ReadAsStringAsync();
             }
         }
+
     }
     public static class IListExtensions
     {
