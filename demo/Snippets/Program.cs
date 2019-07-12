@@ -25,8 +25,16 @@ namespace Snippets
                     Patterns.Simple();
                     break;
                 case "async-stream":
-                default:
                     await AsyncStreams.RunAsync();
+                    break;
+                case "using-old":
+                    AppliUsingSdp.Start();
+                    break;
+                case "using-new":
+                    AppliUsingSdp.Reload();
+                    break;
+                    
+                default:
                     break;
             }
         }

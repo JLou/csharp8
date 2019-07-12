@@ -30,16 +30,18 @@ namespace Snippets
         }
         private static async IAsyncEnumerable<string> GetFactsAsync(int amount)
         {
-            var client = CreateClient();
-            var unusedNumbersList = Enumerable.Range(1, 100).ToList();
-            unusedNumbersList.Shuffle();
-            var unusedNumbers = new Stack<int>(unusedNumbersList.Take(amount));
-
-            while (unusedNumbers.Count > 0)
+            using(var client = CreateClient())
             {
-                var item = unusedNumbers.Pop();
-                var response = await client.GetAsync($"http://numbersapi.com/{item}");
-                yield return await response.Content.ReadAsStringAsync();
+                var unusedNumbersList = Enumerable.Range(1, 100).ToList();
+                unusedNumbersList.Shuffle();
+                var unusedNumbers = new Stack<int>(unusedNumbersList.Take(amount));
+
+                while (unusedNumbers.Count > 0)
+                {
+                    var item = unusedNumbers.Pop();
+                    var response = await client.GetAsync($"http://numbersapi.com/{item}");
+                    yield return await response.Content.ReadAsStringAsync();
+                }
             }
         }
 
