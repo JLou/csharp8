@@ -36,6 +36,9 @@ namespace Snippets
                 case "local-static":
                     LocalStatic.ConvertStuff();
                     break;
+                case "readonly-struct":
+                    ReadonlyStruct.DescribePeople();
+                    break;
                 default:
                     break;
             }

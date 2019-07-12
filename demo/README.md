@@ -4,3 +4,4 @@
 - [Async Streams](./asynchronous-streams.md)
 - [Using Declaration](./using-declaration.md)
 - [Local Static](./local-static.md)
+- [Readonly Struct](./readonly-struct.md)
