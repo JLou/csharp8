@@ -2,3 +2,5 @@
 
 - [Pattern matching](./PATTERN-MATCHING.md)
 - [Async Streams](./asynchronous-streams.md)
+- [Using Declaration](./using-declaration.md)
+- [Local Static](./local-static.md)

@@ -33,7 +33,9 @@ namespace Snippets
                 case "using-new":
                     AppliUsingSdp.Reload();
                     break;
-                    
+                case "local-static":
+                    LocalStatic.ConvertStuff();
+                    break;
                 default:
                     break;
             }
