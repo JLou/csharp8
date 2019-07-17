@@ -39,6 +39,9 @@ namespace Snippets
                 case "readonly-struct":
                     ReadonlyStruct.DescribePeople();
                     break;
+                case "index-and-range":
+                    IndexAndRanges.PullMyIndex();
+                    break;
                 default:
                     break;
             }
