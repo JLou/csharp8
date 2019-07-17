@@ -12,3 +12,4 @@
 - [Local Static](./local-static.md)
 - [Readonly Struct](./readonly-struct.md)
 - [Indices and ranges](./index-ranges.md)
+- [Nullable reference types](./nullable.md)
