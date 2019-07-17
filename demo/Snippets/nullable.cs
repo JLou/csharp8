@@ -1,11 +1,11 @@
 using System;
 
-namespace Nullable
+namespace Snippets
 {
-    class Program
+    public class NullableRefType
     {
-        #region main
-        static void Main(string[] args)
+        #region nullable
+        public static void Main()
         {
             Car car = null;
 

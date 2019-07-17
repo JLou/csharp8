@@ -42,6 +42,9 @@ namespace Snippets
                 case "index-and-range":
                     IndexAndRanges.PullMyIndex();
                     break;
+                case "nullable":
+                    NullableRefType.Main();
+                    break;
                 default:
                     break;
             }

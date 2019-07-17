@@ -30,7 +30,7 @@ The complete .csproj should look like this :
 
 ### And the following program
 
-```cs --project ./Snippets/Snippets.csproj --source-file ./Snippets/nullable.cs --region main
+```cs --project ./Snippets/Snippets.csproj --source-file ./Snippets/nullable.cs --region nullable
 ```
 
 Let's jump into VS 2019 and take a look at the warnings
