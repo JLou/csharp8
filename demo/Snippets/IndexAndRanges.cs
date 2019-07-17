@@ -8,19 +8,22 @@ namespace Snippets
         {
             #region index-and-range
             var carsNameList = new string[] { "AUDI", "FORD", "JAGUAR", "LEXUS", "RENAULT", "TOYOTA", "VOLVO" };
-            var slice = carsNameList[1..4];
+
+            Console.WriteLine(string.Join(", ", carsNameList));
+
+            /*
+            [1..4]
+            [2..]
+            [..2]
+            [^2..]
+            [..^3]
+            [^4..^2]
 
             Index idx = ^4;
             Range r = 1..idx;
-            
-            // slice = carsNameList[r];
-            // slice = carsNameList[2..];
-            // slice = carsNameList[..2];
-            // slice = carsNameList[^2..];
-            // slice = carsNameList[..^3];
-            // slice = carsNameList[^4..^2];
+            carsNameList[r];
+            */
 
-            Console.WriteLine(string.Join(", ", slice));
             #endregion
         }
     }
