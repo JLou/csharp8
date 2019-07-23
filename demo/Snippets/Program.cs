@@ -14,8 +14,8 @@ namespace Snippets
             string package = null,
             string project = null,
             string[] args = null)
-        {    
-#region Main
+        {
+            #region Main
             switch (region)
             {
                 case "pattern-complex":
@@ -43,12 +43,12 @@ namespace Snippets
                     IndexAndRanges.PullMyIndex();
                     break;
                 case "nullable":
-                    NullableRefType.Main();
+                    NullableRefType.Run();
                     break;
                 default:
                     break;
             }
         }
-#endregion
+        #endregion
     }
 }

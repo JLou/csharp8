@@ -5,12 +5,12 @@ namespace Snippets
     public class NullableRefType
     {
         #region nullable
-        public static void Main()
+        public static void Run()
         {
             Car car = null;
 
-            Console.WriteLine(car.Name);
-            
+            Console.WriteLine(car?.Name);
+
             /*
                 Car?
                 if (car != null)
