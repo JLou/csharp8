@@ -22,3 +22,5 @@ Direct link : [clic](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 </Project>
 ```
+
+#### Next: [Pattern matching  &raquo;](./PATTERN-MATCHING.md)   Home: [Home](readme.md)

@@ -34,3 +34,5 @@ The complete .csproj should look like this :
 ```
 
 Let's jump into VS 2019 and take a look at the warnings
+
+#### Next: [Readonly Struct  &raquo;](./readonly-struct.md)   Prev: [Indices and ranges  &laquo;](./index-ranges.md)   Home: [Home](readme.md)

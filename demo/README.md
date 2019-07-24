@@ -4,12 +4,15 @@
 
 [Configure](./setup.md) your environment to run C#8 on .Net core 3.0
 
-## New features
+## Main new features
 
 - [Pattern matching](./PATTERN-MATCHING.md)
 - [Async Streams](./asynchronous-streams.md)
-- [Using Declaration](./using-declaration.md)
-- [Local Static](./local-static.md)
-- [Readonly Struct](./readonly-struct.md)
 - [Indices and ranges](./index-ranges.md)
 - [Nullable reference types](./nullable.md)
+
+## More new features
+
+- [Readonly Struct](./readonly-struct.md)
+- [Using Declaration](./using-declaration.md)
+- [Local Static](./local-static.md)
