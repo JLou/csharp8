@@ -42,4 +42,4 @@ The rule is, TechLeads don't need reviewers, developpers need 4, and temps can't
 ```cs --project ./Snippets/Snippets.csproj --source-file ./Snippets/PatternMatching.cs --region pattern-complex
 ```
 
-#### Next: [Async Streams  &raquo;](./asynchronous-streams.md)   Prev: [Setup  &laquo;](./setup.md)   Home: [Home](readme.md)
+#### Next: [Indices and ranges  &raquo;](./index-ranges.md)   Prev: [Setup  &laquo;](./setup.md)   Home: [Home](readme.md)
